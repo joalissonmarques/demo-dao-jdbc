@@ -29,7 +29,10 @@ public class ProgramDepartment {
 		System.out.println("Inserted! new id = " + newDep.getId());
 		
 		System.out.println("== \n\nTESTE 4: Department Update ==");
-		
+		dep = departmentDao.findById(7);
+		dep.setName("Estoque");
+		departmentDao.update(dep);
+		System.out.println("Updated completed");
 		
 		sc.close();
 	}
