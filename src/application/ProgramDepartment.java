@@ -34,6 +34,9 @@ public class ProgramDepartment {
 		departmentDao.update(dep);
 		System.out.println("Updated completed");
 		
+		System.out.println("== \n\nTESTE 5: Department Delete ==");
+		departmentDao.daleteById(9);
+		System.out.println("Deleted");
 		sc.close();
 	}
 
