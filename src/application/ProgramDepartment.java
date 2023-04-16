@@ -17,11 +17,20 @@ public class ProgramDepartment {
 		Department dep = departmentDao.findById(1);
 		System.out.println(dep);
 		
-		System.out.println("== TESTE 2: Department findByAll ==");
+		System.out.println("== \n\nTESTE 2: Department findByAll ==");
 		List<Department> list = departmentDao.findAll();
 		for(Department obj: list) {
 			System.out.println(obj);
 		}
+		
+		System.out.println("== \n\nTESTE 3: Department Insert ==");
+		Department newDep = new Department(null, "Deposito");
+		departmentDao.insert(newDep);
+		System.out.println("Inserted! new id = " + newDep.getId());
+		
+		System.out.println("== \n\nTESTE 4: Department Update ==");
+		
+		
 		sc.close();
 	}
 
